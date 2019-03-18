@@ -17,6 +17,9 @@
 	<input oninput="showEmail()" type="text" name="email_name" id="email_id"><span id=isValid></span><br>
 	</form>	
 	<script type="text/javascript">
+		CustomElement.init((element, context) => {
+			element.value = "value not yet defined";
+		})
 		console.log("v1.04");
 		function showEmail() {
 			console.log($("#email_id").val());
