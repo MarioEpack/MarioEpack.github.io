@@ -13,20 +13,20 @@
 
 <body>
 	<form>	
-		<input oninput="showEmail()" type="email" name="email_name" id="email_id"><br>
+		<input oninput="showEmail()" type="text" name="email_name" id="email_id"><br>
 	</form>	
 	<script type="text/javascript">
-		console.log("v1.01");
+		console.log("v1.02");
 		function showEmail() {
 			console.log($("#email_id").val());
 			$("#mail").text($("#email_id").val());
+			validateEmail($("#mail").text($("#email_id").val()));
 		}
 
 		function validateEmail(email) {
     		var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     		return re.test(String(email).toLowerCase());
 		}
-		console.log(validateEmail("something@something.com"));
 	</script>
 	<span id="mail"></span>
 </body>
