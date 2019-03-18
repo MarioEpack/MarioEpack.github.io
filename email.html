@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>E-mail</title>
+    <link rel="stylesheet" type="text/css" href="https://kentico.github.io/custom-element-samples/shared/custom-element.css">
     <!-- Include jQuery library -->
 	<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
 	
@@ -12,15 +13,16 @@
 </head>
 
 <body>
-	<form>	
-		<input oninput="showEmail()" type="text" name="email_name" id="email_id"><span id=isValid></span><br>
+	<form>
+	<input oninput="showEmail()" type="text" name="email_name" id="email_id"><span id=isValid></span><br>
 	</form>	
 	<script type="text/javascript">
-		console.log("v1.03");
+		console.log("v1.04");
 		function showEmail() {
 			console.log($("#email_id").val());
 			$("#mail").text($("#email_id").val());
 			$("#isValid").text(validateEmail($("#email_id").val()));
+			CustomElement.setValue($("#email_id").val());
 		}
 
 		function validateEmail(email) {
