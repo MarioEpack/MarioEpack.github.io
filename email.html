@@ -14,10 +14,10 @@
 <body>
 		E-mail address:<br>
 	<form>	
-		<input onsubmit="showEmail()" type="email" name="email_name" id="email_id"><br>
+		<input oninput="showEmail()" type="email" name="email_name" id="email_id"><br>
 	</form>	
 	<script type="text/javascript">
-		console.log("v1.0");
+		console.log("v1.01");
 		function showEmail() {
 			console.log($("#email_id").val());
 			$("#mail").text($("#email_id").val());
