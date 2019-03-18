@@ -17,17 +17,17 @@
 	<input oninput="showEmail()" type="text" name="email_name" id="email_id"><span id=isValid></span><br>
 	</form>	
 	<script type="text/javascript">
-		CustomElement.init((element, context) => {
-			element.value = "value not yet defined";
-		})
+	CustomElement.init((element, context) => {
+		element.value = "value not yet defined";
+	});	
+
 		console.log("v1.04");
 		function showEmail() {
 			console.log($("#email_id").val());
 			$("#mail").text($("#email_id").val());
 			$("#isValid").text(validateEmail($("#email_id").val()));
-			
+			element.value($("#email_id").val());
 		}
-		CustomElement.setValue("wtf");
 
 		function validateEmail(email) {
     		var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
