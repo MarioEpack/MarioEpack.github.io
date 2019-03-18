@@ -13,9 +13,10 @@
 
 <body>
 		E-mail address:<br>
+	<form>	
 		<input type="email" name="email_name" id="email_id"><br>
 		<button type="button" onclick="showEmail()">Save</button>
-
+	</form>	
 	<script type="text/javascript">
 		function showEmail() {
 			document.getElementById("mail").innerHTML = document.getElementById("email_id").value;
