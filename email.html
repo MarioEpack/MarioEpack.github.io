@@ -17,7 +17,9 @@
 		<input onsubmit="showEmail()" type="email" name="email_name" id="email_id"><br>
 	</form>	
 	<script type="text/javascript">
+		console.log("v1.0");
 		function showEmail() {
+			console.log($("#email_id").val());
 			$("#mail").text($("#email_id").val());
 		}
 
