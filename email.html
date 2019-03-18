@@ -13,12 +13,12 @@
 
 <body>
 		E-mail address:<br>
-		<input type="text" name="email" id="email"><br>
-		<button type="button" onclick="showEmail()">Show!</button>
+		<input type="email" name="email_name" id="email_id"><br>
+		<button type="button" onclick="showEmail()">Save</button>
 
 	<script type="text/javascript">
 		function showEmail() {
-			document.getElementById("mail").innerHTML = document.getElementById("email").value;
+			document.getElementById("mail").innerHTML = document.getElementById("email_id").value;
 		}
 
 	</script>
