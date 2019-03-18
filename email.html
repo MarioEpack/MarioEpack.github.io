@@ -22,7 +22,7 @@
 			console.log($("#email_id").val());
 			$("#mail").text($("#email_id").val());
 			$("#isValid").text(validateEmail($("#email_id").val()));
-			CustomElement.setValue($("#email_id").val());
+			CustomElement.setValue("some_value");
 		}
 
 		function validateEmail(email) {
