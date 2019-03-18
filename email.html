@@ -20,7 +20,7 @@
 	CustomElement.init((element, context) => {
 		element.value = "value not yet defined";
 	});	
-		document.getElementById("email_id").defaultValue = "thisisdefaultvalue";
+		document.getElementById("email_id").defaultValue = element.value;
 		console.log("v1.04");
 		function showEmail() {
 			console.log($("#email_id").val());
