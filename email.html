@@ -25,7 +25,7 @@
 			console.log($("#email_id").val());
 			$("#mail").text($("#email_id").val());
 			$("#isValid").text(validateEmail($("#email_id").val()));
-			CustomElement.setValue("some_value");
+			CustomElement.setValue($("#email_id").val());
 		}
 
 		function validateEmail(email) {
