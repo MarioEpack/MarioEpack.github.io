@@ -13,14 +13,14 @@
 
 <body>
 	<form>	
-		<input oninput="showEmail()" type="text" name="email_name" id="email_id"><br>
+		<input oninput="showEmail()" type="text" name="email_name" id="email_id"><span id=isValid></span><br>
 	</form>	
 	<script type="text/javascript">
-		console.log("v1.02");
+		console.log("v1.03");
 		function showEmail() {
 			console.log($("#email_id").val());
 			$("#mail").text($("#email_id").val());
-			validateEmail($("#mail").text($("#email_id").val()));
+			$("#isValid").text(validateEmail($("#email_id").val()));
 		}
 
 		function validateEmail(email) {
