@@ -14,15 +14,15 @@
 <body>
 		E-mail address:<br>
 		<input type="email" name="email_name" id="email_id"><br>
-		
+		<button type="button" onclick="showEmail()">Save</button>
 
 	<script type="text/javascript">
 		function showEmail() {
-			document.getElementById("email_id").value;
+			document.getElementById("mail").innerHTML = document.getElementById("email_id").value;
 		}
 
 	</script>
-	<script>showEmail()</script>
+	<span id="mail"></span>
 </body>
 
 
