@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>E-mail</title>
+    <!-- Include jQuery library -->
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+	
+    <!-- Include the Custom Elements API-->
+    <script src="https://app.kenticocloud.com/js-api/custom-element.js"></script>
+	
+</head>
+
+<body>
+		E-mail address:<br>
+		<input type="text" name="email" id="email"><br>
+		<button type="button" onclick="showEmail()">Show!</button>
+
+	<script type="text/javascript">
+		function showEmail() {
+			document.getElementById("mail").innerHTML = document.getElementById("email").value;
+		}
+
+	</script>
+	<span id="mail"></span>
+</body>
+
+
+	
+	
