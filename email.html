@@ -20,7 +20,7 @@
 	CustomElement.init((element, context) => {
 		element.value = "value not yet defined";
 	});	
-
+		document.getElementById("email_id").defaultValue = "thisisdefaultvalue";
 		console.log("v1.04");
 		function showEmail() {
 			console.log($("#email_id").val());
@@ -33,6 +33,7 @@
     		var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     		return re.test(String(email).toLowerCase());
 		}
+
 	</script>
 	<span id="mail"></span>
 </body>
