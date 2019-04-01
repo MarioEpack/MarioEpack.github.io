@@ -14,9 +14,11 @@
 </head>
 
 <body>
+	<div class="body">
 	<form>
 	<input oninput="showEmail()" type="text" name="email_name" id="email_id"><span id=isValid></span><br>
 	</form>	
+</div>
 	<script type="text/javascript">
 		CustomElement.init((element, context) => {
 			$("#email_id").val(element.value);
