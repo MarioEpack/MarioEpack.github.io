@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="https://kentico.github.io/custom-element-samples/shared/custom-element.css">
     <!-- Include jQuery library -->
 	<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/kentico-cloud-delivery/_bundles/kentico-cloud-delivery-sdk.umd.min.js"></script>
 	
     <!-- Include the Custom Elements API-->
     <script src="https://app.kenticocloud.com/js-api/custom-element.js"></script>
@@ -18,14 +19,15 @@
 	</form>	
 	<script type="text/javascript">
 		CustomElement.init((element, context) => {
-			element.value = "value not yet defined";
+			$("#email_id").val(element.value);
+			console.log($("#email_id"));
 		});	
 
 
 		$(document).ready(function()
 
 		{       
-			$("#email_id").val(element.value);
+			$("#email_id").val("test");
 			console.log($("#email_id"));
 		});
 
