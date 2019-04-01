@@ -14,14 +14,15 @@
 
 <body>
 	<form>
-	<input oninput="showEmail()" type="text" name="email_name" id="email_id"><span id=isValid></span><br>
+	<input oninput="showEmail()" onload="loadEmail()" onsubmit="loadEmail()" type="text" name="email_name" id="email_id"><span id=isValid></span><br>
 	</form>	
 	<script type="text/javascript">
-	CustomElement.init((element, context) => {
-		element.value = "value not yet defined";
-	});	
+		CustomElement.init((element, context) => {
+			element.value = "value not yet defined";
+		});	
 		document.getElementById("email_id").defaultValue = element.value;
 		console.log("v1.04");
+
 		function showEmail() {
 			console.log($("#email_id").val());
 			$("#mail").text($("#email_id").val());
@@ -32,6 +33,10 @@
 		function validateEmail(email) {
     		var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     		return re.test(String(email).toLowerCase());
+		}
+
+		function loadEmail() {
+			document.getElementById("email_id").value = "test";
 		}
 
 	</script>
