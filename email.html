@@ -13,7 +13,7 @@
 </head>
 
 <body>
-	<form onload="loadEmail()">
+	<form>
 	<input oninput="showEmail()" type="text" name="email_name" id="email_id"><span id=isValid></span><br>
 	</form>	
 	<script type="text/javascript">
@@ -21,10 +21,13 @@
 			element.value = "value not yet defined";
 		});	
 
-		function loadEmail() {
+
+		$(document).ready(function()
+
+		{       
 			$("#email_id").val("test");
 			console.log($("#email_id"));
-		}
+		});
 
 		function showEmail() {
 			console.log($("#email_id").val());
