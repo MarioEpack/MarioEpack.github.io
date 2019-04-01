@@ -13,15 +13,18 @@
 </head>
 
 <body>
-	<form>
+	<form onload="loadEmail()">
 	<input oninput="showEmail()" type="text" name="email_name" id="email_id"><span id=isValid></span><br>
 	</form>	
 	<script type="text/javascript">
 		CustomElement.init((element, context) => {
 			element.value = "value not yet defined";
 		});	
-		$("#email_id").val("test");
-		console.log($("#email_id"));
+
+		function loadEmail() {
+			$("#email_id").val("test");
+			console.log($("#email_id"));
+		}
 
 		function showEmail() {
 			console.log($("#email_id").val());
